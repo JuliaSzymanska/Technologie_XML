@@ -1,740 +1,739 @@
 <?xml version="1.0" standalone="no"?>
 <?xml-stylesheet type="text/css" href="laptopy.css"?>
-<!DOCTYPE laptopy SYSTEM "laptopy.dtd">
+<!DOCTYPE laptops SYSTEM "laptopy.dtd">
 
-<laptopy>
+<laptops>
     <heading>
-        <title>LAPTOPY</title>
-        <opis>Zbiór informacji o wybranych modelach laptopów.</opis>
-        <ostatniaModyfikacja>23-02-2020</ostatniaModyfikacja>
+        <title>LAPTOPS</title>
+        <description>A collection of information about selected laptop models.</description>
+        <lastDateCovered>23-02-2020</lastDateCovered>
     </heading>
-    <lista>
-    <laptop producent_ref="Lenovo">
-        <modelLaptopa>IdeaPad S340</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>i5-6265U</modelProcesora>
-            <ilośćRdzeni>4</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">1,6</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">3,6</taktowanie>
-            </taktowanieTurbo>
+    <list>
+    <laptop producer_ref="Lenovo">
+        <modelOfLaptop>IdeaPad S340</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>i5-6265U</modelOfProcessor>
+            <numberOfCores>4</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">1,6</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">3,6</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">6</pojemność>
+                <capacity capacityUnit="MB">6</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="ADATA">
-            <pojemność jednostkaPojemności="GB">8</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">1333</taktowanie>
-            <tryb>Single Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="ADATA" typ="SSD">
-            <pojemność jednostkaPojemności="GB">256</pojemność>
-        </dysk>
-        <dysk producent_ref="Samsung" typ="HDD">
-            <pojemność jednostkaPojemności="GB">1024</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>HD Graphics 620</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>matowa</matryca>
-            <przekątna>14,0</przekątna>
-            <rodzielczość>1920 x 1080</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="ADATA">
+            <capacity capacityUnit="GB">8</capacity>
+            <frequency clockingUnit="MHz">1333</frequency>
+            <mode>Single Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="ADATA" type="SSD">
+            <capacity capacityUnit="GB">256</capacity>
+        </drive>
+        <drive producer_ref="Samsung" type="HDD">
+            <capacity capacityUnit="GB">1024</capacity>
+        </drive>
+        <graphicsCard producer_ref="Intel">
+            <model>HD Graphics 620</model>
+        </graphicsCard>
+        <screen>
+            <matrix>matt</matrix>
+            <diagonal>14,0</diagonal>
+            <resolution>1920 x 1080</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="Lenovo">
-    <modelLaptopa>Legion Y740-17</modelLaptopa>
-    <procesor producent_ref="Intel">
-        <modelProcesora>i7-9750H</modelProcesora>
-        <ilośćRdzeni>6</ilośćRdzeni>
-        <taktowanieBazowe>
-            <taktowanie jednostkaTaktowania="GHz">2,6</taktowanie>
-        </taktowanieBazowe>
-        <taktowanieTurbo>
-            <taktowanie jednostkaTaktowania="GHz">4,5</taktowanie>
-        </taktowanieTurbo>
+    <laptop producer_ref="Lenovo">
+    <modelOfLaptop>Legion Y740-17</modelOfLaptop>
+    <processor producer_ref="Intel">
+        <modelOfProcessor>i7-9750H</modelOfProcessor>
+        <numberOfCores>6</numberOfCores>
+        <baseFrequency>
+            <frequency clockingUnit="GHz">2,6</frequency>
+        </baseFrequency>
+        <turboFrequency>
+            <frequency clockingUnit="GHz">4,5</frequency>
+        </turboFrequency>
         <cache>
-            <pojemność jednostkaPojemności="MB">12</pojemność>
+            <capacity capacityUnit="MB">12</capacity>
         </cache>
-    </procesor>
-    <pamięćRAM producent_ref="Kingstone">
-        <pojemność jednostkaPojemności="GB">12</pojemność>
-        <taktowanie jednostkaTaktowania="MHz">2666</taktowanie>
-        <tryb>Dual Channel</tryb>
-    </pamięćRAM>
-    <dysk producent_ref="ADATA" typ="SSD">
-        <pojemność jednostkaPojemności="GB">256</pojemność>
-    </dysk>
-    <dysk producent_ref="Samsung" typ="HDD">
-        <pojemność jednostkaPojemności="GB">1024</pojemność>
-    </dysk>
-    <kartaGraficzna producent_ref="NVIDIA">
-        <modelKarty>GeForce RTX 2070 Max-Q</modelKarty>
-    </kartaGraficzna>
-    <kartaGraficzna producent_ref="Intel">
-            <modelKarty>UHD Graphics 630</modelKarty>
-    </kartaGraficzna>
-    <ekran>
-        <matryca>matowa</matryca>
-        <przekątna>17,3</przekątna>
-        <rodzielczość>1920 x 1080</rodzielczość>
-    </ekran>
+    </processor>
+    <RAMMemory producer_ref="Kingstone">
+        <capacity capacityUnit="GB">12</capacity>
+        <frequency clockingUnit="MHz">2666</frequency>
+        <mode>Dual Channel</mode>
+    </RAMMemory>
+    <drive producer_ref="ADATA" type="SSD">
+        <capacity capacityUnit="GB">256</capacity>
+    </drive>
+    <drive producer_ref="Samsung" type="HDD">
+        <capacity capacityUnit="GB">1024</capacity>
+    </drive>
+    <graphicsCard producer_ref="NVIDIA">
+        <model>GeForce RTX 2070 Max-Q</model>
+    </graphicsCard>
+    <graphicsCard producer_ref="Intel">
+            <model>UHD Graphics 630</model>
+    </graphicsCard>
+    <screen>
+        <matrix>matt</matrix>
+        <diagonal>17,3</diagonal>
+        <resolution>1920 x 1080</resolution>
+    </screen>
 </laptop>
 
-    <laptop producent_ref="Dell">
-        <modelLaptopa>Inspiron G5</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>i7-9750H</modelProcesora>
-            <ilośćRdzeni>6</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">2,6</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">4,5</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="Dell">
+        <modelOfLaptop>Inspiron G5</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>i7-9750H</modelOfProcessor>
+            <numberOfCores>6</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">2,6</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">4,5</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">12</pojemność>
+                <capacity capacityUnit="MB">12</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="Kingstone">
-            <pojemność jednostkaPojemności="GB">16</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">2666</taktowanie>
-            <tryb>Single Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="ADATA" typ="SSD">
-            <pojemność jednostkaPojemności="GB">256</pojemność>
-        </dysk>
-        <dysk producent_ref="Toshiba" typ="HDD">
-            <pojemność jednostkaPojemności="GB">1000</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="NVIDIA">
-            <modelKarty>GeForce RTX 2060</modelKarty>
-        </kartaGraficzna>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>UHD Graphics 630</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>matowa</matryca>
-            <przekątna>15,6</przekątna>
-            <rodzielczość>1920 x 1080</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="Kingstone">
+            <capacity capacityUnit="GB">16</capacity>
+            <frequency clockingUnit="MHz">2666</frequency>
+            <mode>Single Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="ADATA" type="SSD">
+            <capacity capacityUnit="GB">256</capacity>
+        </drive>
+        <drive producer_ref="Toshiba" type="HDD">
+            <capacity capacityUnit="GB">1000</capacity>
+        </drive>
+        <graphicsCard producer_ref="NVIDIA">
+            <model>GeForce RTX 2060</model>
+        </graphicsCard>
+        <graphicsCard producer_ref="Intel">
+            <model>UHD Graphics 630</model>
+        </graphicsCard>
+        <screen>
+            <matrix>matt</matrix>
+            <diagonal>15,6</diagonal>
+            <resolution>1920 x 1080</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="HP">
-        <modelLaptopa>Pavilion Gaming</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>i5-9300H</modelProcesora>
-            <ilośćRdzeni>4</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">2,4</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">4,1</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="HP">
+        <modelOfLaptop>Pavilion Gaming</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>i5-9300H</modelOfProcessor>
+            <numberOfCores>4</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">2,4</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">4,1</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">8</pojemność>
+                <capacity capacityUnit="MB">8</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="Kingstone">
-            <pojemność jednostkaPojemności="GB">16</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">2666</taktowanie>
-            <tryb>Dual Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="Toshiba" typ="SSD">
-            <pojemność jednostkaPojemności="GB">256</pojemność>
-        </dysk>
-        <dysk producent_ref="Samsung" typ="HDD">
-            <pojemność jednostkaPojemności="GB">1024</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="NVIDIA">
-            <modelKarty>GeForce GTX 1650</modelKarty>
-        </kartaGraficzna>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>UHD Graphics 630</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>matowa</matryca>
-            <przekątna>15,6</przekątna>
-            <rodzielczość>1920 x 1080</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="Kingstone">
+            <capacity capacityUnit="GB">16</capacity>
+            <frequency clockingUnit="MHz">2666</frequency>
+            <mode>Dual Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="Toshiba" type="SSD">
+            <capacity capacityUnit="GB">256</capacity>
+        </drive>
+        <drive producer_ref="Samsung" type="HDD">
+            <capacity capacityUnit="GB">1024</capacity>
+        </drive>
+        <graphicsCard producer_ref="NVIDIA">
+            <model>GeForce GTX 1650</model>
+        </graphicsCard>
+        <graphicsCard producer_ref="Intel">
+            <model>UHD Graphics 630</model>
+        </graphicsCard>
+        <screen>
+            <matrix>matt</matrix>
+            <diagonal>15,6</diagonal>
+            <resolution>1920 x 1080</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="ASUS">
-        <modelLaptopa>VivoBook 15 X571GT</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>i5-9300H</modelProcesora>
-            <ilośćRdzeni>4</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">2,4</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">4,1</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="ASUS">
+        <modelOfLaptop>VivoBook 15 X571GT</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>i5-9300H</modelOfProcessor>
+            <numberOfCores>4</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">2,4</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">4,1</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">8</pojemność>
+                <capacity capacityUnit="MB">8</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="Kingstone">
-            <pojemność jednostkaPojemności="GB">16</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">2400</taktowanie>
-            <tryb>Single Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="Toshiba" typ="SSD">
-            <pojemność jednostkaPojemności="GB">512</pojemność>
-        </dysk>
-        <dysk producent_ref="Kingstone" typ="HDD">
-            <pojemność jednostkaPojemności="GB">1024</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="NVIDIA">
-            <modelKarty>GeForce GTX 1650</modelKarty>
-        </kartaGraficzna>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>UHD Graphics 630</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>matowa</matryca>
-            <przekątna>15,6</przekątna>
-            <rodzielczość>1920 x 1080</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="Kingstone">
+            <capacity capacityUnit="GB">16</capacity>
+            <frequency clockingUnit="MHz">2400</frequency>
+            <mode>Single Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="Toshiba" type="SSD">
+            <capacity capacityUnit="GB">512</capacity>
+        </drive>
+        <drive producer_ref="Kingstone" type="HDD">
+            <capacity capacityUnit="GB">1024</capacity>
+        </drive>
+        <graphicsCard producer_ref="NVIDIA">
+            <model>GeForce GTX 1650</model>
+        </graphicsCard>
+        <graphicsCard producer_ref="Intel">
+            <model>UHD Graphics 630</model>
+        </graphicsCard>
+        <screen>
+            <matrix>matt</matrix>
+            <diagonal>15,6</diagonal>
+            <resolution>1920 x 1080</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="MSI">
-    <modelLaptopa>GL75</modelLaptopa>
-    <procesor producent_ref="Intel">
-        <modelProcesora>i7-9750H</modelProcesora>
-        <ilośćRdzeni>6</ilośćRdzeni>
-        <taktowanieBazowe>
-            <taktowanie jednostkaTaktowania="GHz">2,6</taktowanie>
-        </taktowanieBazowe>
-        <taktowanieTurbo>
-            <taktowanie jednostkaTaktowania="GHz">4,5</taktowanie>
-        </taktowanieTurbo>
+    <laptop producer_ref="MSI">
+    <modelOfLaptop>GL75</modelOfLaptop>
+    <processor producer_ref="Intel">
+        <modelOfProcessor>i7-9750H</modelOfProcessor>
+        <numberOfCores>6</numberOfCores>
+        <baseFrequency>
+            <frequency clockingUnit="GHz">2,6</frequency>
+        </baseFrequency>
+        <turboFrequency>
+            <frequency clockingUnit="GHz">4,5</frequency>
+        </turboFrequency>
         <cache>
-            <pojemność jednostkaPojemności="MB">12</pojemność>
+            <capacity capacityUnit="MB">12</capacity>
         </cache>
-    </procesor>
-    <pamięćRAM producent_ref="Kingstone">
-        <pojemność jednostkaPojemności="GB">16</pojemność>
-        <taktowanie jednostkaTaktowania="MHz">2666</taktowanie>
-        <tryb>Dual Channel</tryb>
-    </pamięćRAM>
-    <dysk producent_ref="Samsung" typ="SSD">
-        <pojemność jednostkaPojemności="GB">256</pojemność>
-    </dysk>
-    <dysk producent_ref="Kingstone" typ="HDD">
-        <pojemność jednostkaPojemności="GB">1000</pojemność>
-    </dysk>
-    <kartaGraficzna producent_ref="NVIDIA">
-        <modelKarty>GeForce GTX 1660Ti</modelKarty>
-    </kartaGraficzna>
-    <kartaGraficzna producent_ref="Intel">
-        <modelKarty>UHD Graphics 630</modelKarty>
-    </kartaGraficzna>
-    <ekran>
-        <matryca>matowa</matryca>
-        <przekątna>17,3</przekątna>
-        <rodzielczość>1920 x 1080</rodzielczość>
-    </ekran>
+    </processor>
+    <RAMMemory producer_ref="Kingstone">
+        <capacity capacityUnit="GB">16</capacity>
+        <frequency clockingUnit="MHz">2666</frequency>
+        <mode>Dual Channel</mode>
+    </RAMMemory>
+    <drive producer_ref="Samsung" type="SSD">
+        <capacity capacityUnit="GB">256</capacity>
+    </drive>
+    <drive producer_ref="Kingstone" type="HDD">
+        <capacity capacityUnit="GB">1000</capacity>
+    </drive>
+    <graphicsCard producer_ref="NVIDIA">
+        <model>GeForce GTX 1660Ti</model>
+    </graphicsCard>
+    <graphicsCard producer_ref="Intel">
+        <model>UHD Graphics 630</model>
+    </graphicsCard>
+    <screen>
+        <matrix>matt</matrix>
+        <diagonal>17,3</diagonal>
+        <resolution>1920 x 1080</resolution>
+    </screen>
 </laptop>
 
-    <laptop producent_ref="Apple">
-        <modelLaptopa>MacBook Air</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>i5-5360U</modelProcesora>
-            <ilośćRdzeni>2</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">1,8</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">2,9</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="Apple">
+        <modelOfLaptop>MacBook Air</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>i5-5360U</modelOfProcessor>
+            <numberOfCores>2</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">1,8</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">2,9</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">3</pojemność>
+                <capacity capacityUnit="MB">3</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="ADATA">
-            <pojemność jednostkaPojemności="GB">8</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">1600</taktowanie>
-            <tryb>Single Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="Kingstone" typ="SSD">
-            <pojemność jednostkaPojemności="GB">128</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>HD Graphics 6000</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>błyszcząca</matryca>
-            <przekątna>13,3</przekątna>
-            <rodzielczość>1440 x 900</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="ADATA">
+            <capacity capacityUnit="GB">8</capacity>
+            <frequency clockingUnit="MHz">1600</frequency>
+            <mode>Single Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="Kingstone" type="SSD">
+            <capacity capacityUnit="GB">128</capacity>
+        </drive>
+        <graphicsCard producer_ref="Intel">
+            <model>HD Graphics 6000</model>
+        </graphicsCard>
+        <screen>
+            <matrix>shiny</matrix>
+            <diagonal>13,3</diagonal>
+            <resolution>1440 x 900</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="Microsoft">
-        <modelLaptopa>Surface Laptop</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>i5-7200U</modelProcesora>
-            <ilośćRdzeni>2</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">2,5</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">3,1</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="Microsoft">
+        <modelOfLaptop>Surface Laptop</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>i5-7200U</modelOfProcessor>
+            <numberOfCores>2</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">2,5</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">3,1</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">3</pojemność>
+                <capacity capacityUnit="MB">3</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="Kingstone">
-            <pojemność jednostkaPojemności="GB">8</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">1866</taktowanie>
-            <tryb>Single Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="Samsung" typ="SSD">
-            <pojemność jednostkaPojemności="GB">256</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>HD Graphics 620</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>błyszcząca</matryca>
-            <przekątna>13,5</przekątna>
-            <rodzielczość>2256 x 1504</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="Kingstone">
+            <capacity capacityUnit="GB">8</capacity>
+            <frequency clockingUnit="MHz">1866</frequency>
+            <mode>Single Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="Samsung" type="SSD">
+            <capacity capacityUnit="GB">256</capacity>
+        </drive>
+        <graphicsCard producer_ref="Intel">
+            <model>HD Graphics 620</model>
+        </graphicsCard>
+        <screen>
+            <matrix>shiny</matrix>
+            <diagonal>13,5</diagonal>
+            <resolution>2256 x 1504</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="Acer">
-        <modelLaptopa>Spin 1</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>Pentium N5000</modelProcesora>
-            <ilośćRdzeni>4</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">1,1</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">2,7</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="Acer">
+        <modelOfLaptop>Spin 1</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>Pentium N5000</modelOfProcessor>
+            <numberOfCores>4</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">1,1</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">2,7</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">4</pojemność>
+                <capacity capacityUnit="MB">4</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="ADATA">
-            <pojemność jednostkaPojemności="GB">4</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">2400</taktowanie>
-            <tryb>Single Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="Toshiba" typ="eMMC">
-            <pojemność jednostkaPojemności="GB">64</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>UHD Graphics 605</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>błyszczący</matryca>
-            <przekątna>11,6</przekątna>
-            <rodzielczość>1920 x 1080</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="ADATA">
+            <capacity capacityUnit="GB">4</capacity>
+            <frequency clockingUnit="MHz">2400</frequency>
+            <mode>Single Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="Toshiba" type="eMMC">
+            <capacity capacityUnit="GB">64</capacity>
+        </drive>
+        <graphicsCard producer_ref="Intel">
+            <model>UHD Graphics 605</model>
+        </graphicsCard>
+        <screen>
+            <matrix>shiny</matrix>
+            <diagonal>11,6</diagonal>
+            <resolution>1920 x 1080</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="ASUS">
-        <modelLaptopa>VivoBook E203MA</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>Celeron N4000</modelProcesora>
-            <ilośćRdzeni>2</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">1,1</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">2,6</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="ASUS">
+        <modelOfLaptop>VivoBook E203MA</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>Celeron N4000</modelOfProcessor>
+            <numberOfCores>2</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">1,1</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">2,6</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">4</pojemność>
+                <capacity capacityUnit="MB">4</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="ADATA">
-            <pojemność jednostkaPojemności="GB">4</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">2400</taktowanie>
-            <tryb>Single Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="Samsung" typ="eMMC">
-            <pojemność jednostkaPojemności="GB">64</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>UHD Graphics 600</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>błyszczący</matryca>
-            <przekątna>11,6</przekątna>
-            <rodzielczość>1366 x 768</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="ADATA">
+            <capacity capacityUnit="GB">4</capacity>
+            <frequency clockingUnit="MHz">2400</frequency>
+            <mode>Single Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="Samsung" type="eMMC">
+            <capacity capacityUnit="GB">64</capacity>
+        </drive>
+        <graphicsCard producer_ref="Intel">
+            <model>UHD Graphics 600</model>
+        </graphicsCard>
+        <screen>
+            <matrix>shiny</matrix>
+            <diagonal>11,6</diagonal>
+            <resolution>1366 x 768</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="Huawei">
-        <modelLaptopa>MateBook D</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>i3-8130U</modelProcesora>
-            <ilośćRdzeni>2</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">2,2</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">3,4</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="Huawei">
+        <modelOfLaptop>MateBook D</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>i3-8130U</modelOfProcessor>
+            <numberOfCores>2</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">2,2</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">3,4</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">4</pojemność>
+                <capacity capacityUnit="MB">4</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="Kingstone">
-            <pojemność jednostkaPojemności="GB">8</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">2400</taktowanie>
-            <tryb>Dual Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="ADATA" typ="SSD">
-            <pojemność jednostkaPojemności="GB">256</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>UHD Graphics 620</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>matowa</matryca>
-            <przekątna>15,6</przekątna>
-            <rodzielczość>1920 x 1080</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="Kingstone">
+            <capacity capacityUnit="GB">8</capacity>
+            <frequency clockingUnit="MHz">2400</frequency>
+            <mode>Dual Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="ADATA" type="SSD">
+            <capacity capacityUnit="GB">256</capacity>
+        </drive>
+        <graphicsCard producer_ref="Intel">
+            <model>UHD Graphics 620</model>
+        </graphicsCard>
+        <screen>
+            <matrix>matt</matrix>
+            <diagonal>15,6</diagonal>
+            <resolution>1920 x 1080</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="Dell">
-        <modelLaptopa>Inspiron 3583</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>i5-8265U</modelProcesora>
-            <ilośćRdzeni>4</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">1,6</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">3,9</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="Dell">
+        <modelOfLaptop>Inspiron 3583</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>i5-8265U</modelOfProcessor>
+            <numberOfCores>4</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">1,6</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">3,9</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">6</pojemność>
+                <capacity capacityUnit="MB">6</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="ADATA">
-            <pojemność jednostkaPojemności="GB">8</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">2400</taktowanie>
-            <tryb>Dual Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="ADATA" typ="SSD">
-            <pojemność jednostkaPojemności="GB">256</pojemność>
-        </dysk>
-        <dysk producent_ref="Samsung" typ="HDD">
-            <pojemność jednostkaPojemności="GB">1024</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>UHD Graphics 620</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>matowa</matryca>
-            <przekątna>15,6</przekątna>
-            <rodzielczość>1920 x 1080</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="ADATA">
+            <capacity capacityUnit="GB">8</capacity>
+            <frequency clockingUnit="MHz">2400</frequency>
+            <mode>Dual Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="ADATA" type="SSD">
+            <capacity capacityUnit="GB">256</capacity>
+        </drive>
+        <drive producer_ref="Samsung" type="HDD">
+            <capacity capacityUnit="GB">1024</capacity>
+        </drive>
+        <graphicsCard producer_ref="Intel">
+            <model>UHD Graphics 620</model>
+        </graphicsCard>
+        <screen>
+            <matrix>matt</matrix>
+            <diagonal>15,6</diagonal>
+            <resolution>1920 x 1080</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="Lenovo">
-        <modelLaptopa>Ideapad 320s-15</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>i5-8250U</modelProcesora>
-            <ilośćRdzeni>4</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">1,6</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">3,4</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="Lenovo">
+        <modelOfLaptop>Ideapad 320s-15</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>i5-8250U</modelOfProcessor>
+            <numberOfCores>4</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">1,6</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">3,4</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">6</pojemność>
+                <capacity capacityUnit="MB">6</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="Kingstone">
-            <pojemność jednostkaPojemności="GB">8</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">2400</taktowanie>
-            <tryb>Single Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="Samsung" typ="SSD">
-            <pojemność jednostkaPojemności="GB">256</pojemność>
-        </dysk>
-        <dysk producent_ref="Toshiba" typ="HDD">
-            <pojemność jednostkaPojemności="GB">1000</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="NVIDIA">
-            <modelKarty>GeForce MX130</modelKarty>
-        </kartaGraficzna>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>UHD Graphics 620</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>matowa</matryca>
-            <przekątna>15,6</przekątna>
-            <rodzielczość>1920 x 1080</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="Kingstone">
+            <capacity capacityUnit="GB">8</capacity>
+            <frequency clockingUnit="MHz">2400</frequency>
+            <mode>Single Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="Samsung" type="SSD">
+            <capacity capacityUnit="GB">256</capacity>
+        </drive>
+        <drive producer_ref="Toshiba" type="HDD">
+            <capacity capacityUnit="GB">1000</capacity>
+        </drive>
+        <graphicsCard producer_ref="NVIDIA">
+            <model>GeForce MX130</model>
+        </graphicsCard>
+        <graphicsCard producer_ref="Intel">
+            <model>UHD Graphics 620</model>
+        </graphicsCard>
+        <screen>
+            <matrix>matt</matrix>
+            <diagonal>15,6</diagonal>
+            <resolution>1920 x 1080</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="Acer">
-        <modelLaptopa>Aspire 5</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>i3-8130U</modelProcesora>
-            <ilośćRdzeni>2</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">2,2</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">3,4</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="Acer">
+        <modelOfLaptop>Aspire 5</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>i3-8130U</modelOfProcessor>
+            <numberOfCores>2</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">2,2</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">3,4</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">4</pojemność>
+                <capacity capacityUnit="MB">4</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="ADATA">
-            <pojemność jednostkaPojemności="GB">8</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">2400</taktowanie>
-            <tryb>Single Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="Toshiba" typ="SSD">
-            <pojemność jednostkaPojemności="GB">256</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>UHD Graphics 620</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>matowa</matryca>
-            <przekątna>17,3</przekątna>
-            <rodzielczość>1920 x 1080</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="ADATA">
+            <capacity capacityUnit="GB">8</capacity>
+            <frequency clockingUnit="MHz">2400</frequency>
+            <mode>Single Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="Toshiba" type="SSD">
+            <capacity capacityUnit="GB">256</capacity>
+        </drive>
+        <graphicsCard producer_ref="Intel">
+            <model>UHD Graphics 620</model>
+        </graphicsCard>
+        <screen>
+            <matrix>matt</matrix>
+            <diagonal>17,3</diagonal>
+            <resolution>1920 x 1080</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="ASUS">
-        <modelLaptopa>VivoBook E203MA</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>Celeron N4000</modelProcesora>
-            <ilośćRdzeni>2</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">1,1</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">2,6</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="ASUS">
+        <modelOfLaptop>VivoBook E203MA</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>Celeron N4000</modelOfProcessor>
+            <numberOfCores>2</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">1,1</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">2,6</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">4</pojemność>
+                <capacity capacityUnit="MB">4</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="Kingstone">
-            <pojemność jednostkaPojemności="GB">4</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">2400</taktowanie>
-            <tryb>Single Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="Toshiba" typ="eMMC">
-            <pojemność jednostkaPojemności="GB">64</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>UHD Graphics 600</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>błyszcząca</matryca>
-            <przekątna>11,6</przekątna>
-            <rodzielczość>1366 x 768</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="Kingstone">
+            <capacity capacityUnit="GB">4</capacity>
+            <frequency clockingUnit="MHz">2400</frequency>
+            <mode>Single Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="Toshiba" type="eMMC">
+            <capacity capacityUnit="GB">64</capacity>
+        </drive>
+        <graphicsCard producer_ref="Intel">
+            <model>UHD Graphics 600</model>
+        </graphicsCard>
+        <screen>
+            <matrix>shiny</matrix>
+            <diagonal>11,6</diagonal>
+            <resolution>1366 x 768</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="Samsung">
-        <modelLaptopa>Chromebook 3</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora> Celeron N3060</modelProcesora>
-            <ilośćRdzeni>2</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">1,6</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">2,48</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="Samsung">
+        <modelOfLaptop>Chromebook 3</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor> Celeron N3060</modelOfProcessor>
+            <numberOfCores>2</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">1,6</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">2,48</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">2</pojemność>
+                <capacity capacityUnit="MB">2</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="ADATA">
-            <pojemność jednostkaPojemności="GB">4</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">1600</taktowanie>
-            <tryb>Single Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="Toshiba" typ="eMMC">
-            <pojemność jednostkaPojemności="GB">16</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>HD Graphics 400</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>matowa</matryca>
-            <przekątna>11,6</przekątna>
-            <rodzielczość>1366 x 768</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="ADATA">
+            <capacity capacityUnit="GB">4</capacity>
+            <frequency clockingUnit="MHz">1600</frequency>
+            <mode>Single Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="Toshiba" type="eMMC">
+            <capacity capacityUnit="GB">16</capacity>
+        </drive>
+        <graphicsCard producer_ref="Intel">
+            <model>HD Graphics 400</model>
+        </graphicsCard>
+        <screen>
+            <matrix>matt</matrix>
+            <diagonal>11,6</diagonal>
+            <resolution>1366 x 768</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="Acer">
-        <modelLaptopa>Aspire 1</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>Pentium N5000</modelProcesora>
-            <ilośćRdzeni>4</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">1,1</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">2,7</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="Acer">
+        <modelOfLaptop>Aspire 1</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>Pentium N5000</modelOfProcessor>
+            <numberOfCores>4</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">1,1</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">2,7</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">4</pojemność>
+                <capacity capacityUnit="MB">4</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="Kingstone">
-            <pojemność jednostkaPojemności="GB">4</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">2400</taktowanie>
-            <tryb>Single Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="Samsung" typ="eMMC">
-            <pojemność jednostkaPojemności="GB">64</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>UHD Graphics 605</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>matowa</matryca>
-            <przekątna>14,0</przekątna>
-            <rodzielczość>1920 x 1080</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="Kingstone">
+            <capacity capacityUnit="GB">4</capacity>
+            <frequency clockingUnit="MHz">2400</frequency>
+            <mode>Single Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="Samsung" type="eMMC">
+            <capacity capacityUnit="GB">64</capacity>
+        </drive>
+        <graphicsCard producer_ref="Intel">
+            <model>UHD Graphics 605</model>
+        </graphicsCard>
+        <screen>
+            <matrix>matt</matrix>
+            <diagonal>14,0</diagonal>
+            <resolution>1920 x 1080</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="Dell">
-    <modelLaptopa>Inspiron 5480</modelLaptopa>
-    <procesor producent_ref="Intel">
-        <modelProcesora>i5-8265U</modelProcesora>
-        <ilośćRdzeni>4</ilośćRdzeni>
-        <taktowanieBazowe>
-            <taktowanie jednostkaTaktowania="GHz">1,6</taktowanie>
-        </taktowanieBazowe>
-        <taktowanieTurbo>
-            <taktowanie jednostkaTaktowania="GHz">3,9</taktowanie>
-        </taktowanieTurbo>
+    <laptop producer_ref="Dell">
+    <modelOfLaptop>Inspiron 5480</modelOfLaptop>
+    <processor producer_ref="Intel">
+        <modelOfProcessor>i5-8265U</modelOfProcessor>
+        <numberOfCores>4</numberOfCores>
+        <baseFrequency>
+            <frequency clockingUnit="GHz">1,6</frequency>
+        </baseFrequency>
+        <turboFrequency>
+            <frequency clockingUnit="GHz">3,9</frequency>
+        </turboFrequency>
         <cache>
-            <pojemność jednostkaPojemności="MB">6</pojemność>
+            <capacity capacityUnit="MB">6</capacity>
         </cache>
-    </procesor>
-    <pamięćRAM producent_ref="ADATA">
-        <pojemność jednostkaPojemności="GB">16</pojemność>
-        <taktowanie jednostkaTaktowania="MHz">2666</taktowanie>
-        <tryb>Dual Channel</tryb>
-    </pamięćRAM>
-    <dysk producent_ref="Samsung" typ="SSD">
-        <pojemność jednostkaPojemności="GB">480</pojemność>
-    </dysk>
-    <dysk producent_ref="Toshiba" typ="HDD">
-        <pojemność jednostkaPojemności="GB">1000</pojemność>
-    </dysk>
-    <kartaGraficzna producent_ref="Intel">
-        <modelKarty>UHD Graphics 620</modelKarty>
-    </kartaGraficzna>
-    <ekran>
-        <matryca>matowa</matryca>
-        <przekątna>14,0</przekątna>
-        <rodzielczość>1920 x 1080</rodzielczość>
-    </ekran>
+    </processor>
+    <RAMMemory producer_ref="ADATA">
+        <capacity capacityUnit="GB">16</capacity>
+        <frequency clockingUnit="MHz">2666</frequency>
+        <mode>Dual Channel</mode>
+    </RAMMemory>
+    <drive producer_ref="Samsung" type="SSD">
+        <capacity capacityUnit="GB">480</capacity>
+    </drive>
+    <drive producer_ref="Toshiba" type="HDD">
+        <capacity capacityUnit="GB">1000</capacity>
+    </drive>
+    <graphicsCard producer_ref="Intel">
+        <model>UHD Graphics 620</model>
+    </graphicsCard>
+    <screen>
+        <matrix>matt</matrix>
+        <diagonal>14,0</diagonal>
+        <resolution>1920 x 1080</resolution>
+    </screen>
 </laptop>
 
-    <laptop producent_ref="Apple">
-        <modelLaptopa>MacBook Pro</modelLaptopa>
-        <procesor producent_ref="Intel">
-            <modelProcesora>i7-8950HK</modelProcesora>
-            <ilośćRdzeni>6</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">2,6</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">4,5</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="Apple">
+        <modelOfLaptop>MacBook Pro</modelOfLaptop>
+        <processor producer_ref="Intel">
+            <modelOfProcessor>i7-8950HK</modelOfProcessor>
+            <numberOfCores>6</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">2,6</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">4,5</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">6</pojemność>
+                <capacity capacityUnit="MB">6</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="Kingstone">
-            <pojemność jednostkaPojemności="GB">16</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">2400</taktowanie>
-            <tryb>Dual Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="Samsung" typ="SSD">
-            <pojemność jednostkaPojemności="GB">512</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="AMD">
-            <modelKarty>Radeon Pro 555X</modelKarty>
-        </kartaGraficzna>
-        <kartaGraficzna producent_ref="Intel">
-            <modelKarty>UHD Graphics 630</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>błyszcząca</matryca>
-            <przekątna>15,4</przekątna>
-            <rodzielczość>2880 x 1800</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="Kingstone">
+            <capacity capacityUnit="GB">16</capacity>
+            <frequency clockingUnit="MHz">2400</frequency>
+            <mode>Dual Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="Samsung" type="SSD">
+            <capacity capacityUnit="GB">512</capacity>
+        </drive>
+        <graphicsCard producer_ref="AMD">
+            <model>Radeon Pro 555X</model>
+        </graphicsCard>
+        <graphicsCard producer_ref="Intel">
+            <model>UHD Graphics 630</model>
+        </graphicsCard>
+        <screen>
+            <matrix>shiny</matrix>
+            <diagonal>15,4</diagonal>
+            <resolution>2880 x 1800</resolution>
+        </screen>
     </laptop>
 
-    <laptop producent_ref="HP">
-        <modelLaptopa>15</modelLaptopa>
-        <procesor producent_ref="AMD">
-            <modelProcesora>Ryzen 5 2500U</modelProcesora>
-            <ilośćRdzeni>4</ilośćRdzeni>
-            <taktowanieBazowe>
-                <taktowanie jednostkaTaktowania="GHz">2,0</taktowanie>
-            </taktowanieBazowe>
-            <taktowanieTurbo>
-                <taktowanie jednostkaTaktowania="GHz">3,6</taktowanie>
-            </taktowanieTurbo>
+    <laptop producer_ref="HP">
+        <modelOfLaptop>15</modelOfLaptop>
+        <processor producer_ref="AMD">
+            <modelOfProcessor>Ryzen 5 2500U</modelOfProcessor>
+            <numberOfCores>4</numberOfCores>
+            <baseFrequency>
+                <frequency clockingUnit="GHz">2,0</frequency>
+            </baseFrequency>
+            <turboFrequency>
+                <frequency clockingUnit="GHz">3,6</frequency>
+            </turboFrequency>
             <cache>
-                <pojemność jednostkaPojemności="MB">4</pojemność>
+                <capacity capacityUnit="MB">4</capacity>
             </cache>
-        </procesor>
-        <pamięćRAM producent_ref="Kingstone">
-            <pojemność jednostkaPojemności="GB">8</pojemność>
-            <taktowanie jednostkaTaktowania="MHz">2400</taktowanie>
-            <tryb>Dual Channel</tryb>
-        </pamięćRAM>
-        <dysk producent_ref="Toshiba" typ="SSD">
-            <pojemność jednostkaPojemności="GB">256</pojemność>
-        </dysk>
-        <kartaGraficzna producent_ref="AMD">
-            <modelKarty>Radeon Vega 8</modelKarty>
-        </kartaGraficzna>
-        <ekran>
-            <matryca>matowa</matryca>
-            <przekątna>15,6</przekątna>
-            <rodzielczość>1920 x 1080</rodzielczość>
-        </ekran>
+        </processor>
+        <RAMMemory producer_ref="Kingstone">
+            <capacity capacityUnit="GB">8</capacity>
+            <frequency clockingUnit="MHz">2400</frequency>
+            <mode>Dual Channel</mode>
+        </RAMMemory>
+        <drive producer_ref="Toshiba" type="SSD">
+            <capacity capacityUnit="GB">256</capacity>
+        </drive>
+        <graphicsCard producer_ref="AMD">
+            <model>Radeon Vega 8</model>
+        </graphicsCard>
+        <screen>
+            <matrix>matt</matrix>
+            <diagonal>15,6</diagonal>
+            <resolution>1920 x 1080</resolution>
+        </screen>
     </laptop>
-    </lista>
-    <producenci>
-        <producent producent_id="ASUS">ASUSTeK Computer Inc.</producent>
-        <producent producent_id="ADATA">ADATA Technology Co., Ltd.</producent>
-        <producent producent_id="Samsung">Samsung Electronics</producent>
-        <producent producent_id="Intel">Intel Corporation</producent>
-        <producent producent_id="AMD">Advanced Micro Devices, Inc.</producent>
-        <producent producent_id="Dell">Dell Computer Corporation</producent>
-        <producent producent_id="Lenovo">Lenovo Group Limited</producent>
-        <producent producent_id="Kingstone">Kingston Technology Corporation</producent>
-        <producent producent_id="NVIDIA">Nvidia Corporation</producent>
-        <producent producent_id="Toshiba">Toshiba Corporation</producent>
-        <producent producent_id="HP">HP Inc.</producent>
-        <producent producent_id="MSI">Micro-Star International Co., Ltd</producent>
-        <producent producent_id="Apple">Apple Inc.</producent>
-        <producent producent_id="Microsoft">Microsoft Corporation</producent>
-        <producent producent_id="Acer">Acer</producent>
-        <producent producent_id="Huawei">Huawei Technologies Co., Ltd.</producent>
-        
-    </producenci>
+    </list>
+    <producers>
+        <producer producer_id="ASUS">ASUSTeK Computer Inc.</producer>
+        <producer producer_id="ADATA">ADATA Technology Co., Ltd.</producer>
+        <producer producer_id="Samsung">Samsung Electronics</producer>
+        <producer producer_id="Intel">Intel Corporation</producer>
+        <producer producer_id="AMD">Advanced Micro Devices, Inc.</producer>
+        <producer producer_id="Dell">Dell Computer Corporation</producer>
+        <producer producer_id="Lenovo">Lenovo Group Limited</producer>
+        <producer producer_id="Kingstone">Kingston Technology Corporation</producer>
+        <producer producer_id="NVIDIA">Nvidia Corporation</producer>
+        <producer producer_id="Toshiba">Toshiba Corporation</producer>
+        <producer producer_id="HP">HP Inc.</producer>
+        <producer producer_id="MSI">Micro-Star International Co., Ltd</producer>
+        <producer producer_id="Apple">Apple Inc.</producer>
+        <producer producer_id="Microsoft">Microsoft Corporation</producer>
+        <producer producer_id="Acer">Acer</producer>
+        <producer producer_id="Huawei">Huawei Technologies Co., Ltd.</producer>
+    </producers>
 
-</laptopy>
+</laptops>

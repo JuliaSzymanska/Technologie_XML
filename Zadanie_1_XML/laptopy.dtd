@@ -1,44 +1,44 @@
-<!ELEMENT laptopy (heading, lista, producenci)>
-        <!ELEMENT heading (title, opis, ostatniaModyfikacja)>
+<!ELEMENT laptops (heading, list, producers)>
+        <!ELEMENT heading (title, description, lastDateCovered)>
         <!ELEMENT title (#PCDATA)>
-        <!ELEMENT opis (#PCDATA)>
-		<!ELEMENT ostatniaModyfikacja (#PCDATA)>
-		<!ELEMENT lista (laptop+)>
-        <!ELEMENT laptop (modelLaptopa, procesor, pamięćRAM, dysk+, kartaGraficzna+, ekran)>
+        <!ELEMENT description (#PCDATA)>
+		<!ELEMENT lastDateCovered (#PCDATA)>
+		<!ELEMENT list (laptop+)>
+        <!ELEMENT laptop (modelOfLaptop, processor, RAMMemory, drive+, graphicsCard+, screen)>
         <!ATTLIST laptop
-                producent_ref IDREF #REQUIRED>
-        <!ELEMENT modelLaptopa (#PCDATA)>
-        <!ELEMENT procesor (modelProcesora, ilośćRdzeni, taktowanieBazowe, taktowanieTurbo?, cache)>
-        <!ATTLIST procesor
-                producent_ref IDREF #REQUIRED>
-        <!ELEMENT modelProcesora (#PCDATA)>
-        <!ELEMENT ilośćRdzeni (#PCDATA)>
-        <!ELEMENT taktowanieBazowe (taktowanie)>
-        <!ELEMENT taktowanie (#PCDATA)>
-		<!ATTLIST taktowanie
-				jednostkaTaktowania (GHz | MHz) "GHz">
-        <!ELEMENT taktowanieTurbo (taktowanie)>
-        <!ELEMENT cache (pojemność)>
-        <!ELEMENT pamięćRAM (pojemność, taktowanie, tryb)>
-        <!ATTLIST pamięćRAM
-                producent_ref IDREF #REQUIRED>
-        <!ELEMENT pojemność (#PCDATA)>
-        <!ATTLIST pojemność
-                jednostkaPojemności (kB | MB | GB | TB) "GB">
-        <!ELEMENT tryb (#PCDATA)>
-        <!ELEMENT dysk (pojemność)>
-        <!ATTLIST dysk
-                producent_ref IDREF #REQUIRED
-                typ (SSD | HDD | eMMC) #REQUIRED>
-		<!ELEMENT kartaGraficzna (modelKarty)>
-		<!ATTLIST kartaGraficzna
-				producent_ref IDREF #REQUIRED>
-		<!ELEMENT modelKarty (#PCDATA)>
-        <!ELEMENT ekran (matryca, przekątna, rodzielczość)>
-        <!ELEMENT matryca (#PCDATA)>
-        <!ELEMENT przekątna (#PCDATA)>
-        <!ELEMENT rodzielczość (#PCDATA)>
-        <!ELEMENT producenci (producent)*>
-        <!ELEMENT producent (#PCDATA)>
-        <!ATTLIST producent
-                producent_id ID #REQUIRED>
+                producer_ref IDREF #REQUIRED>
+        <!ELEMENT modelOfLaptop (#PCDATA)>
+        <!ELEMENT processor (modelOfProcessor, numberOfCores, baseFrequency, turboFrequency?, cache)>
+        <!ATTLIST processor
+                producer_ref IDREF #REQUIRED>
+        <!ELEMENT modelOfProcessor (#PCDATA)>
+        <!ELEMENT numberOfCores (#PCDATA)>
+        <!ELEMENT baseFrequency (frequency)>
+        <!ELEMENT frequency (#PCDATA)>
+		<!ATTLIST frequency
+				clockingUnit (GHz | MHz) "GHz">
+        <!ELEMENT turboFrequency (frequency)>
+        <!ELEMENT cache (capacity)>
+        <!ELEMENT RAMMemory (capacity, frequency, mode)>
+        <!ATTLIST RAMMemory
+                producer_ref IDREF #REQUIRED>
+        <!ELEMENT capacity (#PCDATA)>
+        <!ATTLIST capacity
+                capacityUnit (kB | MB | GB | TB) "GB">
+        <!ELEMENT mode (#PCDATA)>
+        <!ELEMENT drive (capacity)>
+        <!ATTLIST drive
+                producer_ref IDREF #REQUIRED
+                type (SSD | HDD | eMMC) #REQUIRED>
+		<!ELEMENT graphicsCard (model)>
+		<!ATTLIST graphicsCard
+				producer_ref IDREF #REQUIRED>
+		<!ELEMENT model (#PCDATA)>
+        <!ELEMENT screen (matrix, diagonal, resolution)>
+        <!ELEMENT matrix (#PCDATA)>
+        <!ELEMENT diagonal (#PCDATA)>
+        <!ELEMENT resolution (#PCDATA)>
+        <!ELEMENT producers (producer)*>
+        <!ELEMENT producer (#PCDATA)>
+        <!ATTLIST producer
+                producer_id ID #REQUIRED>

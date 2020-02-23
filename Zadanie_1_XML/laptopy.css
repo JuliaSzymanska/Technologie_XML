@@ -1,4 +1,4 @@
-laptopy {
+laptops {
 	background-image: url("laptopy.jpg");
 	background-repeat: no-repeat;
 	background-color: white;
@@ -26,15 +26,15 @@ title{
 	font-size: 50px;
 	margin-bottom: 5px;
 }
-opis, ostatniaModyfikacja{
+description, lastDateCovered{
 	 display: block;
 	 font-size: 20px;
 	 margin-bottom: 5px;
  }
-ostatniaModyfikacja::before{
-	content: "Data ostatniej modyfikacji: ";
+lastDateCovered::before{
+	content: "Last date covered: ";
 }
-lista{
+list{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -59,24 +59,24 @@ laptop * {
 	margin-bottom: 5px;
 }
 laptop::before {
-	content: attr(producent_ref);
+	content: attr(producer_ref);
 	font-size: 45px;
 	font-weight: bold;
 	width: 200%;
 }
-modelLaptopa{
+modelOfLaptop{
 	 font-size: 30px;
 	 width: 100%;
  }
-procesor::before{
-	content: "Procesor:";
+processor::before{
+	content: "Processor:";
 	display:inline;
 	margin-left: 20px;
 	width:100%;
 	font-size: 28px;
 	margin-bottom: 15px;
 }
-procesor {
+processor {
 	border-radius: 15px;
 	margin-left: 12px;
 	box-shadow: dimgrey -10px 10px 10px ;
@@ -85,55 +85,55 @@ procesor {
 	margin-bottom: 12px;
 }
 
-modelProcesora::before, modelKarty::before{
+modelOfLaptop::before, model::before{
 	content: "Model: ";
 	display:inline;
 	width:40%;
 }
-ilośćRdzeni::before{
-	content: "Ilość rdzeni: ";
+numberOfCore::before{
+	content: "Number of cores: ";
 	display:inline;
 	width:40%;
 }
-taktowanieBazowe > taktowanie::before{
-	content: "Taktowanie bazowe: ";
+baseFrequency > frequency::before{
+	content: "Base requency: ";
 	display:inline;
 	width:40%;
 }
-taktowanie::after{
-	 content: " " attr(jednostkaTaktowania);
+frequency::after{
+	 content: " " attr(clockingUnit);
 	 display:inline;
 	 width:40%;
  }
-taktowanieTurbo > taktowanie::before{
-	content: "Taktowanie turbo: ";
+turboFrequency > frequency::before{
+	content: "Turbo frequency: ";
 	display:inline;
 	width:40%;
 }
-cache > pojemność::before{
-	content: "Pojemność cache: ";
+cache > capacity::before{
+	content: "Cache capacity: ";
 	display:inline;
 	width:40%;
 }
-pojemność::before{
-	content: "Pojemność: ";
+capacity::before{
+	content: "Capacity: ";
 	display:inline;
 	width:40%;
 }
-pojemność::after{
-	content: " " attr(jednostkaPojemności);
+capacity::after{
+	content: " " attr(capacityUnit);
 	display:inline;
 	width:40%;
 }
-pamięćRAM::before {
-	content: "Pamięć RAM:";
+RAMMemory::before {
+	content: "RAM memory:";
 	display:inline;
 	min-width: 150px;
 	max-width: 150px;
 	font-size: 28px;
 	margin-bottom: 15px;
 }
-pamięćRAM{
+RAMMemory{
 	border-radius: 15px;
 	margin-left: 12px;
 	box-shadow: dimgrey -10px 10px 10px ;
@@ -141,43 +141,18 @@ pamięćRAM{
 	width: 97%;
 	margin-bottom: 12px;
 }
-pamięćRAM > taktowanie::before{
-	content: "Taktowanie pamięci RAM: ";
+RAMMemory > frequency::before{
+	content: "RAM frequency: ";
 	display:inline;
 	width:40%;
 }
-tryb::before{
-	content: "Tryb: ";
+mode::before{
+	content: "Mode: ";
 	display:inline;
 	width:40%;
 }
-dysk::before{
-	content: "Dysk:";
-	display:inline;
-	width:40%;
-	min-width: 150px;
-	max-width: 150px;
-	font-size: 28px;
-	margin-bottom: 15px;
-}
-dysk{
-	border-radius: 15px;
-	margin-left: 12px;
-	box-shadow: dimgrey -10px 10px 10px ;
-	border:solid 1.5px;
-	width: 97%;
-	margin-bottom: 12px;
-}
-kartaGraficzna{
-	border-radius: 15px;
-	margin-left: 12px;
-	box-shadow: dimgrey -10px 10px 10px ;
-	border:solid 1.5px;
-	width: 97%;
-	margin-bottom: 12px;
-}
-kartaGraficzna::before{
-	content: "Karta graficzna:";
+drive::before{
+	content: "Drive:";
 	display:inline;
 	width:40%;
 	min-width: 150px;
@@ -185,21 +160,7 @@ kartaGraficzna::before{
 	font-size: 28px;
 	margin-bottom: 15px;
 }
-kartaGraficzna::after, procesor::after, pamięćRAM::after, dysk::after{
-	content: "Producent: " attr(producent_ref);
-	display:inline;
-	width:40%;
-}
-ekran::before{
-	content: "Ekran: ";
-	display:inline;
-	width:40%;
-	min-width: 150px;
-	max-width: 150px;
-	font-size: 28px;
-	margin-bottom: 15px;
-}
-ekran{
+drive{
 	border-radius: 15px;
 	margin-left: 12px;
 	box-shadow: dimgrey -10px 10px 10px ;
@@ -207,66 +168,105 @@ ekran{
 	width: 97%;
 	margin-bottom: 12px;
 }
-matryca::before{
-	content: "Matryca: ";
+graphicsCard{
+	border-radius: 15px;
+	margin-left: 12px;
+	box-shadow: dimgrey -10px 10px 10px ;
+	border:solid 1.5px;
+	width: 97%;
+	margin-bottom: 12px;
+}
+graphicsCard::before{
+	content: "Graphics card:";
+	display:inline;
+	width:40%;
+	min-width: 150px;
+	max-width: 150px;
+	font-size: 28px;
+	margin-bottom: 15px;
+}
+graphicsCard::after, processor::after, RAMMemory::after, drive::after{
+	content: "Producer: " attr(producer_ref);
 	display:inline;
 	width:40%;
 }
-przekątna::before {
-	content: "Przekątna: ";
+screen::before{
+	content: "Screen: ";
+	display:inline;
+	width:40%;
+	min-width: 150px;
+	max-width: 150px;
+	font-size: 28px;
+	margin-bottom: 15px;
+}
+screen{
+	border-radius: 15px;
+	margin-left: 12px;
+	box-shadow: dimgrey -10px 10px 10px ;
+	border:solid 1.5px;
+	width: 97%;
+	margin-bottom: 12px;
+}
+matrix::before{
+	content: "Matrix: ";
+	display:inline;
+	width:40%;
+}
+diagonal::before {
+	content: "Diagonal: ";
 	display: inline;
 	width: 40%;
 }
-przekątna::after{
+diagonal::after{
 	content: "''";
 	display:inline;
 	width:40%;
 }
-rodzielczość::before{
-	content: "Rozdzielczość: ";
+resolution::before{
+	content: "Resolution: ";
 	display:inline;
 	width:40%;
 }
-laptop:hover[producent_ref=ASUS]{
+laptop:hover[producer_ref=ASUS]{
 	background: rgba(255, 25, 25, 0.15);
 }
-laptop:hover[producent_ref=Lenovo]{
+laptop:hover[producer_ref=Lenovo]{
 	background: rgba(255, 189, 25, 0.15);
 }
-laptop:hover[producent_ref=Dell]{
+laptop:hover[producer_ref=Dell]{
 	background: rgba(113, 255, 25, 0.15);
 }
-laptop:hover[producent_ref=HP]{
+laptop:hover[producer_ref=HP]{
 	background: rgba(25, 255, 155, 0.15);
 }
-laptop:hover[producent_ref=MSI]{
+laptop:hover[producer_ref=MSI]{
 	background: rgba(25, 90, 255, 0.15);
 }
-laptop:hover[producent_ref=Apple]{
+laptop:hover[producer_ref=Apple]{
 	background: rgba(247, 25, 255, 0.15);
 }
-laptop:hover[producent_ref=Microsoft]{
+laptop:hover[producer_ref=Microsoft]{
 	background: rgba(221, 255, 43, 0.15);
 }
-laptop:hover[producent_ref=Acer]{
+laptop:hover[producer_ref=Acer]{
 	background: rgba(255, 140, 25, 0.2);
 }
-laptop:hover[producent_ref=Huawei]{
+laptop:hover[producer_ref=Huawei]{
 	background: rgba(16, 110 ,0, 0.2);
 }
-laptop:hover[producent_ref=Samsung]{
+laptop:hover[producer_ref=Samsung]{
 	background: rgba(23, 75, 103, 0.2);
 }
 laptop:hover{
 	transition: 0.3s;
 }
-dysk:hover, procesor:hover, pamięćRAM:hover, ekran:hover, kartaGraficzna:hover{
+drive:hover, processor:hover, RAMMemory:hover, screen:hover, graphicsCard:hover{
 	background: rgba(165, 165, 152, 0.6);
 	transform: scale(1.01, 1.01);
 	transition: 0.15s;
 	font-weight: bold;
 }
-producenci{
+producers{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -280,7 +280,7 @@ producenci{
 	box-shadow: dimgrey -10px 5px 5px;
 	padding: 7px;
 }
-producent{
+producer{
 	border-radius: 15px;
 	margin: 5px 5px 7px 5px;
 	box-shadow: dimgrey -10px 10px 7px;
@@ -289,7 +289,7 @@ producent{
 	text-align: center;
 	padding: 10px;
 }
-producent:hover{
+producer:hover{
 	transition: 0.3s;
 	transform: scale(1.2, 1.2);
 	background: rgba(165, 165, 152, 0.7);
