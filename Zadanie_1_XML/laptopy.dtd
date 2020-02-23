@@ -4,11 +4,10 @@
         <!ELEMENT opis (#PCDATA)>
 		<!ELEMENT ostatniaModyfikacja (#PCDATA)>
 		<!ELEMENT lista (laptop+)>
-        <!ELEMENT laptop (modelLaptopa, dataPremiery, procesor, pamięćRAM, dysk+, kartaGraficzna+, ekran)>
+        <!ELEMENT laptop (modelLaptopa, procesor, pamięćRAM, dysk+, kartaGraficzna+, ekran)>
         <!ATTLIST laptop
                 producent_ref IDREF #REQUIRED>
         <!ELEMENT modelLaptopa (#PCDATA)>
-        <!ELEMENT dataPremiery (#PCDATA)>
         <!ELEMENT procesor (modelProcesora, ilośćRdzeni, taktowanieBazowe, taktowanieTurbo?, cache)>
         <!ATTLIST procesor
                 producent_ref IDREF #REQUIRED>

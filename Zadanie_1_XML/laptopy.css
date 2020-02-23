@@ -68,13 +68,6 @@ modelLaptopa{
 	 font-size: 30px;
 	 width: 100%;
  }
-dataPremiery::before {
-	content: "Data premiery: ";
-	display: inline;
-	min-width: 150px;
-	max-width: 150px;
-	font-weight: normal;
-}
 procesor::before{
 	content: "Procesor:";
 	display:inline;
