@@ -1,0 +1,44 @@
+<!ELEMENT laptopy (heading, lista, producenci)>
+        <!ELEMENT heading (title, opis, ostatniaModyfikacja)>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT opis (#PCDATA)>
+		<!ELEMENT ostatniaModyfikacja (#PCDATA)>
+		<!ELEMENT lista (laptop+)>
+        <!ELEMENT laptop (modelLaptopa, procesor, pamięćRAM, dysk+, kartaGraficzna+, ekran)>
+        <!ATTLIST laptop
+                producent_ref IDREF #REQUIRED>
+        <!ELEMENT modelLaptopa (#PCDATA)>
+        <!ELEMENT procesor (modelProcesora, ilośćRdzeni, taktowanieBazowe, taktowanieTurbo?, cache)>
+        <!ATTLIST procesor
+                producent_ref IDREF #REQUIRED>
+        <!ELEMENT modelProcesora (#PCDATA)>
+        <!ELEMENT ilośćRdzeni (#PCDATA)>
+        <!ELEMENT taktowanieBazowe (taktowanie)>
+        <!ELEMENT taktowanie (#PCDATA)>
+		<!ATTLIST taktowanie
+				jednostkaTaktowania (GHz | MHz) "GHz">
+        <!ELEMENT taktowanieTurbo (taktowanie)>
+        <!ELEMENT cache (pojemność)>
+        <!ELEMENT pamięćRAM (pojemność, taktowanie, tryb)>
+        <!ATTLIST pamięćRAM
+                producent_ref IDREF #REQUIRED>
+        <!ELEMENT pojemność (#PCDATA)>
+        <!ATTLIST pojemność
+                jednostkaPojemności (kB | MB | GB | TB) "GB">
+        <!ELEMENT tryb (#PCDATA)>
+        <!ELEMENT dysk (pojemność)>
+        <!ATTLIST dysk
+                producent_ref IDREF #REQUIRED
+                typ (SSD | HDD | eMMC) #REQUIRED>
+		<!ELEMENT kartaGraficzna (modelKarty)>
+		<!ATTLIST kartaGraficzna
+				producent_ref IDREF #REQUIRED>
+		<!ELEMENT modelKarty (#PCDATA)>
+        <!ELEMENT ekran (matryca, przekątna, rodzielczość)>
+        <!ELEMENT matryca (#PCDATA)>
+        <!ELEMENT przekątna (#PCDATA)>
+        <!ELEMENT rodzielczość (#PCDATA)>
+        <!ELEMENT producenci (producent)*>
+        <!ELEMENT producent (#PCDATA)>
+        <!ATTLIST producent
+                producent_id ID #REQUIRED>

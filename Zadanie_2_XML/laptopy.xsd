@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:lap="xml-zad2-laptopy"
+           targetNamespace="xml-zad2-laptopy"
+           elementFormDefault="qualified">
+  <xs:element name="laptopy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lap:heading"/>
+        <xs:element ref="lap:lista"/>
+        <xs:element ref="lap:producenci"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:key name="producent_key">
+      <xs:selector xpath="lap:producenci/lap:producent"/>
+      <xs:field xpath="@producent_id"/>
+    </xs:key>
+
+      <xs:keyref name="producent_keyref" refer="lap:producent_key">
+          <xs:selector xpath="lap:lista/lap:laptop"/>
+          <xs:field xpath="@producent_ref"/>
+      </xs:keyref>
+  </xs:element>
+
+  <xs:element name="heading">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lap:title"/>
+        <xs:element ref="lap:opis"/>
+        <xs:element ref="lap:ostatniaModyfikacja"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="title" type="xs:string" default="LAPTOPY"/>
+  <xs:element name="opis" type="xs:string" default="Zbiór informacji o wybranych modelach laptopów."/>
+
+  <xs:simpleType name="data">   <!-- TYP NAZWANY -->
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{2}[-]\d{2}[-]\d{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="ostatniaModyfikacja" type="lap:data"/>
+
+  <xs:element name="lista">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lap:laptop" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="laptop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lap:modelLaptopa"/>
+        <xs:element ref="lap:procesor"/>
+        <xs:element ref="lap:pamięćRAM"/>
+        <xs:element ref="lap:dysk" maxOccurs="unbounded"/>
+        <xs:element ref="lap:kartaGraficzna" maxOccurs="unbounded"/>
+        <xs:element ref="lap:ekran"/>
+      </xs:sequence>
+        <xs:attribute type="xs:token" name="producent_ref" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="modelLaptopa" type="xs:string"/>
+
+  <xs:element name="procesor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="modelProcesora" type="xs:string"/>
+        <xs:element ref="lap:ilośćRdzeni"/>
+        <xs:element ref="lap:taktowanieBazowe"/>
+        <xs:element ref="lap:taktowanieTurbo"/>
+        <xs:element ref="lap:cache"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ilośćRdzeni">
+    <xs:simpleType>
+      <xs:restriction base="xs:positiveInteger">
+        <xs:maxInclusive value="64"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="taktowanieBazowe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lap:taktowanie"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="taktowanieTurbo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lap:taktowanie"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="taktowanie">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="lap:taktowanieType">
+          <xs:attribute type="xs:token" name="jednostkaTaktowania" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="taktowanieType">
+    <xs:restriction base="xs:float">
+      <xs:maxInclusive value="10000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="pojemność">
+      <xs:complexType>
+          <xs:simpleContent>
+              <xs:extension base="xs:positiveInteger">
+                  <xs:attribute type="xs:token" name="jednostkaPojemności" use="required"/>
+              </xs:extension>
+          </xs:simpleContent>
+      </xs:complexType>
+  </xs:element>
+
+  <xs:element name="cache">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lap:pojemność"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="pamięćRAM">
+    <xs:complexType>
+      <xs:sequence>
+          <xs:element ref="lap:pojemność"/>
+          <xs:element ref="lap:taktowanie"/>
+          <xs:element ref="lap:tryb"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="tryb">
+    <xs:simpleType>
+      <xs:restriction base="xs:normalizedString">
+        <xs:enumeration value="Single Channel"/>
+        <xs:enumeration value="Dual Channel"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:simpleType name="dyskType">  <!-- TYP NAZWANY -->
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="HDD"/>
+      <xs:enumeration value="SSD"/>
+      <xs:enumeration value="eMMC"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="dysk">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lap:pojemność"/>
+      </xs:sequence>
+      <xs:attribute type="lap:dyskType" name="typ" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="kartaGraficzna">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="modelKarty" type="xs:normalizedString"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ekran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lap:matryca"/>
+        <xs:element ref="lap:przekątna"/>
+        <xs:element ref="lap:rodzielczość"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="matryca">
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="matowa"/>
+        <xs:enumeration value="błyszcząca"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="przekątna">
+    <xs:simpleType>
+      <xs:restriction base="xs:float">
+        <xs:minInclusive value="10.0"/>
+        <xs:maxInclusive value="19.0"/>
+        <xs:pattern value="\d{2}[.]\d"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="rodzielczość">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="\d{4} x \d{4}"/>
+        <xs:pattern value="\d{3} x \d{4}"/>
+        <xs:pattern value="\d{4} x \d{3}"/>
+        <xs:pattern value="\d{3} x \d{3}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="producenci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lap:producent" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="producent">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:token">
+          <xs:attribute type="xs:token" name="producent_id" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
