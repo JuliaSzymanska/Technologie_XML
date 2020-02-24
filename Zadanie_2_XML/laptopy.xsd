@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:lap="xml-zad2-laptopy"
+           xmlns:lap="xml-zad2-laptopy" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
            targetNamespace="xml-zad2-laptopy"
            elementFormDefault="qualified">
-  <xs:element name="laptopy">
+  <xs:element name="laptops">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="lap:heading"/>
-        <xs:element ref="lap:lista"/>
-        <xs:element ref="lap:producenci"/>
+        <xs:element ref="lap:list"/>
+        <xs:element ref="lap:producers"/>
       </xs:sequence>
     </xs:complexType>
 
-    <xs:key name="producent_key">
-      <xs:selector xpath="lap:producenci/lap:producent"/>
-      <xs:field xpath="@producent_id"/>
+    <xs:key name="producer_key">
+      <xs:selector xpath="lap:producers/lap:producer"/>
+      <xs:field xpath="@producer_id"/>
     </xs:key>
 
-      <xs:keyref name="producent_keyref" refer="lap:producent_key">
-          <xs:selector xpath="lap:lista/lap:laptop"/>
-          <xs:field xpath="@producent_ref"/>
+      <xs:keyref name="producer_keyref" refer="lap:producer_key">
+          <xs:selector xpath="lap:list/lap:laptop"/>
+          <xs:field xpath="@producer_ref"/>
       </xs:keyref>
   </xs:element>
 
@@ -27,24 +27,24 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="lap:title"/>
-        <xs:element ref="lap:opis"/>
-        <xs:element ref="lap:ostatniaModyfikacja"/>
+        <xs:element ref="lap:description"/>
+        <xs:element ref="lap:lastDateCovered"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="title" type="xs:string" default="LAPTOPY"/>
-  <xs:element name="opis" type="xs:string" default="Zbiór informacji o wybranych modelach laptopów."/>
+  <xs:element name="title" type="xs:string" default="LAPTOPS"/>
+  <xs:element name="description" type="xs:string" default="A collection of information about selected laptop models."/>
 
-  <xs:simpleType name="data">   <!-- TYP NAZWANY -->
+  <xs:simpleType name="date">
     <xs:restriction base="xs:string">
       <xs:pattern value="\d{2}[-]\d{2}[-]\d{4}"/>
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:element name="ostatniaModyfikacja" type="lap:data"/>
+  <xs:element name="lastDateCovered" type="lap:date"/>
 
-  <xs:element name="lista">
+  <xs:element name="list">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="lap:laptop" maxOccurs="unbounded" minOccurs="0"/>
@@ -55,32 +55,33 @@
   <xs:element name="laptop">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="lap:modelLaptopa"/>
-        <xs:element ref="lap:procesor"/>
-        <xs:element ref="lap:pamięćRAM"/>
-        <xs:element ref="lap:dysk" maxOccurs="unbounded"/>
-        <xs:element ref="lap:kartaGraficzna" maxOccurs="unbounded"/>
-        <xs:element ref="lap:ekran"/>
+        <xs:element ref="lap:modelOfLaptop"/>
+        <xs:element ref="lap:processor"/>
+        <xs:element ref="lap:RAMMemory"/>
+        <xs:element ref="lap:drive" maxOccurs="unbounded"/>
+        <xs:element ref="lap:graphicsCard" maxOccurs="unbounded"/>
+        <xs:element ref="lap:screen"/>
       </xs:sequence>
-        <xs:attribute type="xs:token" name="producent_ref" use="optional"/>
+        <xs:attribute type="xs:token" name="producer_ref" use="optional"/>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="modelLaptopa" type="xs:string"/>
+  <xs:element name="modelOfLaptop" type="xs:string"/>
 
-  <xs:element name="procesor">
+  <xs:element name="processor">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="modelProcesora" type="xs:string"/>
-        <xs:element ref="lap:ilośćRdzeni"/>
-        <xs:element ref="lap:taktowanieBazowe"/>
-        <xs:element ref="lap:taktowanieTurbo"/>
+        <xs:element name="modelOfProcessor" type="xs:string"/>
+        <xs:element ref="lap:numberOfCores"/>
+        <xs:element ref="lap:baseFrequency"/>
+        <xs:element ref="lap:turboFrequency"/>
         <xs:element ref="lap:cache"/>
       </xs:sequence>
+      <xs:attribute type="xs:token" name="producer_ref" use="optional"/>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="ilośćRdzeni">
+  <xs:element name="numberOfCores">
     <xs:simpleType>
       <xs:restriction base="xs:positiveInteger">
         <xs:maxInclusive value="64"/>
@@ -88,43 +89,43 @@
     </xs:simpleType>
   </xs:element>
 
-  <xs:element name="taktowanieBazowe">
+  <xs:element name="baseFrequency">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="lap:taktowanie"/>
+        <xs:element ref="lap:frequency"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="taktowanieTurbo">
+  <xs:element name="turboFrequency">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="lap:taktowanie"/>
+        <xs:element ref="lap:frequency"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="taktowanie">
+  <xs:element name="frequency">
     <xs:complexType>
       <xs:simpleContent>
-        <xs:extension base="lap:taktowanieType">
-          <xs:attribute type="xs:token" name="jednostkaTaktowania" use="required"/>
+        <xs:extension base="lap:frequencyType">
+          <xs:attribute type="xs:token" name="clockingUnit" use="required"/>
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
 
-  <xs:simpleType name="taktowanieType">
+  <xs:simpleType name="frequencyType">
     <xs:restriction base="xs:float">
       <xs:maxInclusive value="10000"/>
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:element name="pojemność">
+  <xs:element name="capacity">
       <xs:complexType>
           <xs:simpleContent>
               <xs:extension base="xs:positiveInteger">
-                  <xs:attribute type="xs:token" name="jednostkaPojemności" use="required"/>
+                  <xs:attribute type="xs:token" name="capacityUnit" use="required"/>
               </xs:extension>
           </xs:simpleContent>
       </xs:complexType>
@@ -133,22 +134,23 @@
   <xs:element name="cache">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="lap:pojemność"/>
+        <xs:element ref="lap:capacity"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="pamięćRAM">
+  <xs:element name="RAMMemory">
     <xs:complexType>
       <xs:sequence>
-          <xs:element ref="lap:pojemność"/>
-          <xs:element ref="lap:taktowanie"/>
-          <xs:element ref="lap:tryb"/>
+          <xs:element ref="lap:capacity"/>
+          <xs:element ref="lap:frequency"/>
+          <xs:element ref="lap:mode"/>
       </xs:sequence>
+      <xs:attribute type="xs:token" name="producer_ref" use="optional"/>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="tryb">
+  <xs:element name="mode">
     <xs:simpleType>
       <xs:restriction base="xs:normalizedString">
         <xs:enumeration value="Single Channel"/>
@@ -157,7 +159,7 @@
     </xs:simpleType>
   </xs:element>
 
-  <xs:simpleType name="dyskType">  <!-- TYP NAZWANY -->
+  <xs:simpleType name="driveType">
     <xs:restriction base="xs:token">
       <xs:enumeration value="HDD"/>
       <xs:enumeration value="SSD"/>
@@ -165,43 +167,45 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:element name="dysk">
+  <xs:element name="drive">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="lap:pojemność"/>
+        <xs:element ref="lap:capacity"/>
       </xs:sequence>
-      <xs:attribute type="lap:dyskType" name="typ" use="required"/>
+      <xs:attribute type="lap:driveType" name="type" use="required"/>
+      <xs:attribute type="xs:token" name="producer_ref" use="optional"/>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="kartaGraficzna">
+  <xs:element name="graphicsCard">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="modelKarty" type="xs:normalizedString"/>
+        <xs:element name="model" type="xs:normalizedString"/>
+      </xs:sequence>
+      <xs:attribute type="xs:token" name="producer_ref" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="screen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lap:matrix"/>
+        <xs:element ref="lap:diagonal"/>
+        <xs:element ref="lap:resolution"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="ekran">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="lap:matryca"/>
-        <xs:element ref="lap:przekątna"/>
-        <xs:element ref="lap:rodzielczość"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-
-  <xs:element name="matryca">
+  <xs:element name="matrix">
     <xs:simpleType>
       <xs:restriction base="xs:token">
-        <xs:enumeration value="matowa"/>
-        <xs:enumeration value="błyszcząca"/>
+        <xs:enumeration value="matt"/>
+        <xs:enumeration value="shiny"/>
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
 
-  <xs:element name="przekątna">
+  <xs:element name="diagonal">
     <xs:simpleType>
       <xs:restriction base="xs:float">
         <xs:minInclusive value="10.0"/>
@@ -211,7 +215,7 @@
     </xs:simpleType>
   </xs:element>
 
-  <xs:element name="rodzielczość">
+  <xs:element name="resolution">
     <xs:simpleType>
       <xs:restriction base="xs:string">
         <xs:pattern value="\d{4} x \d{4}"/>
@@ -222,19 +226,19 @@
     </xs:simpleType>
   </xs:element>
 
-  <xs:element name="producenci">
+  <xs:element name="producers">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="lap:producent" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="lap:producer" maxOccurs="unbounded" minOccurs="0"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="producent">
+  <xs:element name="producer">
     <xs:complexType>
       <xs:simpleContent>
         <xs:extension base="xs:token">
-          <xs:attribute type="xs:token" name="producent_id" use="optional"/>
+          <xs:attribute type="xs:token" name="producer_id" use="optional"/>
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
